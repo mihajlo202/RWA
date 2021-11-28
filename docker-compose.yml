@@ -1,0 +1,45 @@
+version: '3.4'
+services:
+  # frontend:
+  #   image: frontend:${TAG}
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   depends_on:
+  #     - backend
+  #   networks: 
+  #     msm-network: null
+  # backend:
+  #   image: backend:${TAG}
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     - 'ConnectionStrings__BHS.MSM=Server=db;Port=5432;Database=SHOP_DB;Username=postgres;Password=postgres;'
+  #   networks:
+  #     msm-network:
+  #       aliases:
+  #         - backend
+  db:
+    image: postgres:${POSTGRES_TAG}
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: SHOP_DB
+    volumes:
+      - db:/var/lib/postgresql/data
+      #- ./config/MSM.BHS.sql:/docker-entrypoint-initdb.d/MSM.BHS.sql
+  pgadmin:
+    image: dpage/pgadmin4:5.5
+    environment:
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_DEFAULT_EMAIL: admin@shop.com
+    restart: unless-stopped
+    ports:
+      - 8889:80
+    depends_on:
+     - db
+volumes:
+  db:
