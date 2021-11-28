@@ -4,7 +4,17 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
-
-
-<app-mainpage></app-mainpage>
-<router-outlet></router-outlet>
+<div class="celo">
+    <!-- <div class="nav-bar">
+      <div class="nav-buttons" *ngIf="showNavButtons">
+        <button class="nav-button" (click)="pocetnaClicked();">Početna</button>
+        <button class="nav-button" (click)="profilClicked();">Profil</button>
+        <button class="nav-button" (click)="logoutClicked();">Logout</button>
+      </div>
+      <img class="logo" src="../assets/shop1.png">
+      <span class="text-logo">E-KUPI</span>
+    </div> -->
+    <div class="ruter">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

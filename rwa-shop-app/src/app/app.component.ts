@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'rwa-shop-app';
+  title = 'SHOP-RWA';
+  // user$=this.store.pipe(
+  //     select(selectLoggedUser),
+  //     filter(val => val !== undefined)
+  //   );
+  constructor(//private store: Store<AppState>,
+    private router: Router) {}
+
+  ngOnInit(){
+  }
+
+  logoutClicked(){
+      // this.store.dispatch(LogOut());
+      // this.showNavService.changeFlag(false);
+      this.router.navigate([`./main`]);
+  }
+
+  pocetnaClicked(){
+    // this.user$.subscribe(
+    // user=>{
+    //     this.router.navigate([`/${user.role}/main`])
+    //   })
+  }
+
+  profilClicked(){
+    // this.user$.subscribe(
+    // user=>{
+    //     this.router.navigate([`/${user.role}/profil`])
+    //   })
+    // }
+  }
 }

@@ -12,6 +12,12 @@ import { MatCardModule } from '@angular/material/card'
 import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SellerComponent } from './components/seller/seller.component';
+import { SellerProfileComponent } from './components/seller-profile/seller-profile.component';
+import { SellerCreateProductComponent } from './components/seller-create-product/seller-create-product.component';
+import { CustomerComponent } from './components/customer/customer.component';
+import { CustomerProfileComponent } from './components/customer-profile/customer-profile.component';
+import { CustomerWishlistComponent } from './components/customer-wishlist/customer-wishlist.component';
 
 
 @NgModule({
@@ -19,7 +25,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    MainpageComponent
+    MainpageComponent,
+    SellerComponent,
+    SellerProfileComponent,
+    SellerCreateProductComponent,
+    CustomerComponent,
+    CustomerProfileComponent,
+    CustomerWishlistComponent
   ],
   imports: [
     BrowserModule,
