@@ -22,7 +22,12 @@ export class CustomerComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    var user: LoggedUser;
+    var user: LoggedUser = {
+      id: 0,
+      email: '',
+      password: '',
+      role: ''
+    };
     // this.user$.subscribe(
     //   u => user = u
     // )
