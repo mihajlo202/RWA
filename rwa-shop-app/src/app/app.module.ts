@@ -18,6 +18,7 @@ import { SellerCreateProductComponent } from './components/seller-create-product
 import { CustomerComponent } from './components/customer/customer.component';
 import { CustomerProfileComponent } from './components/customer-profile/customer-profile.component';
 import { CustomerWishlistComponent } from './components/customer-wishlist/customer-wishlist.component';
+import { SellerUpdateProductComponent } from './components/seller-update-product/seller-update-product.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CustomerWishlistComponent } from './components/customer-wishlist/custom
     SellerCreateProductComponent,
     CustomerComponent,
     CustomerProfileComponent,
-    CustomerWishlistComponent
+    CustomerWishlistComponent,
+    SellerUpdateProductComponent
   ],
   imports: [
     BrowserModule,

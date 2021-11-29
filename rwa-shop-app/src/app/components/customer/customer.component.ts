@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggedUser } from 'src/app/models/loggeduser';
 
 @Component({
   selector: 'app-customer',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor() { }
+  // user$=this.store.pipe(
+  //   select(selectLoggedUser),
+  //   filter(val => val !== undefined)
+  // );
+
+  // customer$=this.store.pipe(
+  //   select(selectCustomerInfo),
+  //   filter(val => val !== undefined)
+  // );
+
+  constructor(//private store: Store<AppState>
+    ) { }
 
   ngOnInit(): void {
+    var user: LoggedUser;
+    // this.user$.subscribe(
+    //   u => user = u
+    // )
+    // this.store.dispatch(GetCustomerInfo({email: user.email}))
+    // this.store.dispatch(LoadOrderForCustomer({id: user.id}));
+    // this.store.dispatch(LoadAllProducts());
   }
 
 }
